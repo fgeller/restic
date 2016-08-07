@@ -101,6 +101,7 @@ func (cmd CmdPrune) Execute(args []string) error {
 
 	cmd.global.Verbosef("processed %d blobs: %d duplicate blobs, %d duplicate bytes\n",
 		stats.blobs, duplicateBlobs, duplicateBytes)
+
 	cmd.global.Verbosef("load all snapshots\n")
 
 	snapshots, err := restic.LoadAllSnapshots(repo)
